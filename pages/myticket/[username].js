@@ -18,7 +18,7 @@ export async function getServerSideProps({ query }) {
   let seoConfig = null;
   let user = null;
 
-  if (username && username !== "")
+  if (username)
     await firestore
       .collection("/tickets")
       .doc(username)
